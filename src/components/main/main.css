@@ -1,0 +1,10 @@
+.hero {
+  background-color: grey;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 30vh auto;
+}

@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "question": "Capital of Egypt",
+        "answers": [
+            {
+                "id": 1,
+                "text": "Cairo",
+                "isCorrect": true
+            },
+            {
+                "id": 2,
+                "text": "Milan",
+                "isCorrect": false
+            },
+            {
+                "id": 3,
+                "text": "Alexandria",
+                "isCorrect": false
+            },
+            {
+                "id": 4,
+                "text": "Bagdad",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "question": "No. of states in the US",
+        "answers": [
+            {
+                "id": 1,
+                "text": "52",
+                "isCorrect": false
+            },
+            {
+                "id": 2,
+                "text": "50",
+                "isCorrect": false
+            },
+            {
+                "id": 3,
+                "text": "51",
+                "isCorrect": true
+            },
+            {
+                "id": 4,
+                "text": "34",
+                "isCorrect": false
+            }
+        ]
+    }
+]
