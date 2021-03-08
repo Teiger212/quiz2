@@ -1,0 +1,9 @@
+.hero input {
+  color: rebeccapurple;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.hero button {
+  margin-top: 1.5em;
+}

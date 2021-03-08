@@ -1,8 +1,8 @@
 import './header.css'
 
-const Header = ({ questionNumber = 1, score = 0 }) => (
+const Header = ({ playerName, score = 0 }) => (
   <header className='header'>
-    <span>Question number {questionNumber}</span>
+    <span>{`${playerName}'s game`}</span>
     <span>Score: {score}</span>
   </header>
 )

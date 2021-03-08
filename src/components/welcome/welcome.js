@@ -1,16 +1,39 @@
-import Button from '@material-ui/core/Button'
+import { Button, TextField } from '@material-ui/core'
+import { useState } from 'react'
 
-const Welcome = ({ setStart }) => (
-  <div className='hero'>
-    <h2> Welcome to a cool trivia game</h2>
-    <Button
-      variant='contained'
-      color='secondary'
-      onClick={() => setStart(true)}
-    >
-      Start Quiz
-    </Button>
-  </div>
-)
+import './welcome.css'
+
+const Welcome = ({ handleStart }) => {
+  const [buttonDisabled, setButtonDisabled] = useState(true)
+  const [currentName, setCurrentName] = useState('')
+
+  const handleChange = (text) => {
+    const {
+      target: { value },
+    } = text
+    setCurrentName(value)
+    setButtonDisabled(!value)
+  }
+
+  return (
+    <div className='hero'>
+      <h2> Welcome to a cool trivia game</h2>
+      <TextField
+        onChange={(text) => handleChange(text)}
+        label='Player Name'
+        color='secondary'
+        variant='outlined'
+      />
+      <Button
+        disabled={buttonDisabled}
+        variant='contained'
+        color='secondary'
+        onClick={() => handleStart(currentName)}
+      >
+        Start Quiz
+      </Button>
+    </div>
+  )
+}
 
 export default Welcome

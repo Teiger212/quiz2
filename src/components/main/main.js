@@ -7,8 +7,22 @@ import './main.css'
 
 const Main = () => {
   const [start, setStart] = useState(false)
+  const [playerName, setPlayerName] = useState('')
 
-  return <div>{start ? <Game /> : <Welcome setStart={setStart} />}</div>
+  const handleStart = (name) => {
+    setPlayerName(name)
+    setStart(true)
+  }
+
+  return (
+    <div>
+      {start ? (
+        <Game playerName={playerName} />
+      ) : (
+        <Welcome handleStart={handleStart} />
+      )}
+    </div>
+  )
 }
 
 export default Main
